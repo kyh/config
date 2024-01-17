@@ -1,6 +1,6 @@
 {
   "name": "@kyh/eslint-config",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "publishConfig": {
     "access": "public"
   },
@@ -28,8 +28,8 @@
     "eslint-plugin-react-hooks": "^4.6.0"
   },
   "devDependencies": {
-    "@kyh/prettier-config": "workspace:latest",
-    "@kyh/tsconfig": "workspace:latest",
+    "@kyh/prettier-config": "^0.1.4",
+    "@kyh/tsconfig": "^0.1.4",
     "@types/eslint": "^8.56.2",
     "eslint": "^8.56.0",
     "prettier": "^3.2.3",
