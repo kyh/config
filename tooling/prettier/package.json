@@ -6,7 +6,7 @@
     "access": "public"
   },
   "exports": {
-    ".": "./index.js"
+    ".": "./base.js"
   },
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
@@ -15,11 +15,11 @@
   },
   "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
-    "prettier": "^3.2.3",
+    "prettier": "^3.2.4",
     "prettier-plugin-tailwindcss": "^0.5.11"
   },
   "devDependencies": {
-    "@kyh/tsconfig": "^0.1.4",
+    "@kyh/tsconfig": "workspace:^",
     "typescript": "^5.3.3"
   },
   "prettier": "@kyh/prettier-config"
