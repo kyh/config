@@ -23,8 +23,8 @@
     "@changesets/cli": "^2.27.1",
     "@kyh/prettier-config": "workspace:*",
     "prettier": "^3.2.5",
-    "turbo": "^1.12.3",
-    "typescript": "^5.3.3"
+    "turbo": "^1.12.5",
+    "typescript": "^5.4.2"
   },
   "prettier": "@kyh/prettier-config"
 }
