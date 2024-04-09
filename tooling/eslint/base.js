@@ -31,6 +31,13 @@ const config = {
         checksVoidReturn: false,
       },
     ],
+    "@typescript-eslint/no-unnecessary-condition": [
+      "error",
+      {
+        allowConstantLoopConditions: true,
+      },
+    ],
+    "@typescript-eslint/no-non-null-assertion": "error",
     "prefer-arrow-functions/prefer-arrow-functions": [
       "warn",
       {
