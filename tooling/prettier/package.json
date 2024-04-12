@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@kyh/tsconfig": "workspace:^",
-    "typescript": "^5.4.4"
+    "typescript": "^5.4.5"
   },
   "prettier": "@kyh/prettier-config"
 }

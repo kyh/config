@@ -32,7 +32,7 @@ Set the following in `package.json`.
 
 ```json
 {
-  "prettier": "@vercel/style-guide/prettier"
+  "prettier": "@kyh/style-guide/prettier"
 }
 ```
 
@@ -60,13 +60,11 @@ Set the following in `package.json`.
 
 ```json
 {
-  "prettier": "@vercel/style-guide/prettier"
+  "prettier": "@kyh/style-guide/prettier"
 }
 ```
 
 ## TypeScript
-
-
 
 ### Installation
 
@@ -85,6 +83,6 @@ Set the following in `package.json`.
 
 ```json
 {
-  "prettier": "@vercel/style-guide/prettier"
+  "prettier": "@kyh/style-guide/prettier"
 }
 ```
