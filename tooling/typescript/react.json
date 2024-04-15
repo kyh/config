@@ -2,7 +2,6 @@
   "extends": "./base.json",
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "ES2022"],
-    "jsx": "preserve",
-    "incremental": true
+    "jsx": "preserve"
   }
 }
