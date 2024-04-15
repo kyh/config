@@ -1,5 +1,11 @@
 # @kyh/prettier-config
 
+## 0.1.8
+
+### Patch Changes
+
+- update tsconfig
+
 ## 0.1.7
 
 ### Patch Changes
