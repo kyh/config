@@ -1,5 +1,11 @@
 # @kyh/tsconfig
 
+## 0.1.9
+
+### Patch Changes
+
+- update packages
+
 ## 0.1.8
 
 ### Patch Changes
