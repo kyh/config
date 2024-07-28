@@ -2,9 +2,9 @@
   "name": "config",
   "private": true,
   "engines": {
-    "node": ">=20.15"
+    "node": ">=20.15.0"
   },
-  "packageManager": "pnpm@9.4.0",
+  "packageManager": "pnpm@9.6.0",
   "scripts": {
     "build": "turbo build",
     "clean": "git clean -xdf node_modules",
@@ -20,11 +20,11 @@
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.6",
+    "@changesets/cli": "^2.27.7",
     "@kyh/prettier-config": "workspace:*",
-    "prettier": "^3.3.2",
-    "turbo": "^2.0.5",
-    "typescript": "^5.5.2"
+    "prettier": "catalog:",
+    "turbo": "^2.0.9",
+    "typescript": "catalog:"
   },
   "prettier": "@kyh/prettier-config"
 }

@@ -1,62 +1,64 @@
-/** @type {import("eslint").Linter.Config} */
-const config = {
-  extends: [
-    "turbo",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended-type-checked",
-    "plugin:@typescript-eslint/stylistic-type-checked",
-  ],
-  env: {
-    es2022: true,
-    node: true,
-  },
-  parser: "@typescript-eslint/parser",
-  parserOptions: { project: true },
-  plugins: ["@typescript-eslint", "import", "prefer-arrow-functions"],
-  rules: {
-    "turbo/no-undeclared-env-vars": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
-      { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
-    ],
-    "@typescript-eslint/consistent-type-imports": [
-      "warn",
-      { prefer: "type-imports", fixStyle: "separate-type-imports" },
-    ],
-    "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
-    "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
-    "@typescript-eslint/no-misused-promises": [
-      "error",
-      {
-        checksVoidReturn: false,
-      },
-    ],
-    "@typescript-eslint/no-unnecessary-condition": [
-      "error",
-      {
-        allowConstantLoopConditions: true,
-      },
-    ],
-    "@typescript-eslint/no-non-null-assertion": "error",
-    "prefer-arrow-functions/prefer-arrow-functions": [
-      "warn",
-      {
-        classPropertiesAllowed: false,
-        disallowPrototype: false,
-        returnStyle: "unchanged",
-        singleReturnOnly: false,
-      },
-    ],
-  },
-  ignorePatterns: [
-    "**/*.config.js",
-    "**/*.config.cjs",
-    "**/.eslintrc.cjs",
-    ".next",
-    "dist",
-    "pnpm-lock.yaml",
-  ],
-  reportUnusedDisableDirectives: true,
-};
+/// <reference types="./types.d.ts" />
 
-module.exports = config;
+import * as path from "node:path";
+import { includeIgnoreFile } from "@eslint/compat";
+import eslint from "@eslint/js";
+import importPlugin from "eslint-plugin-import";
+import turboPlugin from "eslint-plugin-turbo";
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
+  // Ignore files not tracked by VCS and any config files
+  includeIgnoreFile(path.join(import.meta.dirname, "../../.gitignore")),
+  { ignores: ["**/*.config.*"] },
+  {
+    files: ["**/*.js", "**/*.ts", "**/*.tsx"],
+    plugins: {
+      import: importPlugin,
+      turbo: turboPlugin,
+    },
+    extends: [
+      eslint.configs.recommended,
+      ...tseslint.configs.recommended,
+      ...tseslint.configs.recommendedTypeChecked,
+      ...tseslint.configs.stylisticTypeChecked,
+    ],
+    rules: {
+      ...turboPlugin.configs.recommended.rules,
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
+      "@typescript-eslint/consistent-type-imports": [
+        "warn",
+        { prefer: "type-imports", fixStyle: "separate-type-imports" },
+      ],
+      "@typescript-eslint/no-misused-promises": [
+        2,
+        { checksVoidReturn: { attributes: false } },
+      ],
+      "@typescript-eslint/no-unnecessary-condition": [
+        "error",
+        {
+          allowConstantLoopConditions: true,
+        },
+      ],
+      "@typescript-eslint/no-non-null-assertion": "error",
+      "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
+      "prefer-arrow-functions/prefer-arrow-functions": [
+        "warn",
+        {
+          classPropertiesAllowed: false,
+          disallowPrototype: false,
+          returnStyle: "unchanged",
+          singleReturnOnly: false,
+        },
+      ],
+      "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
+    },
+  },
+  {
+    linterOptions: { reportUnusedDisableDirectives: true },
+    languageOptions: { parserOptions: { projectService: true } },
+  },
+);

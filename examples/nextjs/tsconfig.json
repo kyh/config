@@ -1,0 +1,5 @@
+{
+  "extends": "@kyh/tsconfig/nextjs.json",
+  "include": [".", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
