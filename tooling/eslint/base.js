@@ -45,15 +45,15 @@ export default tseslint.config(
       ],
       "@typescript-eslint/no-non-null-assertion": "error",
       "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
-      "prefer-arrow-functions/prefer-arrow-functions": [
-        "warn",
-        {
-          classPropertiesAllowed: false,
-          disallowPrototype: false,
-          returnStyle: "unchanged",
-          singleReturnOnly: false,
-        },
-      ],
+      // "prefer-arrow-functions/prefer-arrow-functions": [
+      //   "warn",
+      //   {
+      //     classPropertiesAllowed: false,
+      //     disallowPrototype: false,
+      //     returnStyle: "unchanged",
+      //     singleReturnOnly: false,
+      //   },
+      // ],
       "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
     },
   },
