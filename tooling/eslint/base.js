@@ -1,15 +1,38 @@
 /// <reference types="./types.d.ts" />
 
+import * as fs from "node:fs";
 import * as path from "node:path";
+import * as url from "node:url";
 import { includeIgnoreFile } from "@eslint/compat";
 import eslint from "@eslint/js";
 import importPlugin from "eslint-plugin-import";
 import turboPlugin from "eslint-plugin-turbo";
 import tseslint from "typescript-eslint";
 
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const fileExists = async (filePath) => {
+  try {
+    await fs.promises.access(filePath);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+const gitignorePath = path.join(__dirname, "../../.gitignore");
+const gitignorePath2 = path.join(__dirname, "../../../.gitignore");
+
 export default tseslint.config(
   // Ignore files not tracked by VCS and any config files
-  includeIgnoreFile(path.join(import.meta.dirname, "../../.gitignore")),
+  includeIgnoreFile(
+    (await fileExists(gitignorePath))
+      ? gitignorePath
+      : (await fileExists(gitignorePath2))
+        ? gitignorePath2
+        : "",
+  ),
   { ignores: ["**/*.config.*"] },
   {
     files: ["**/*.js", "**/*.ts", "**/*.tsx"],

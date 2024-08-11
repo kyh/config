@@ -1,16 +1,19 @@
-import { promises as fs } from "fs";
-import { join } from "path";
+import * as fs from "node:fs";
+import * as path from "node:path";
 
 const fileExists = async (filePath) => {
   try {
-    await fs.access(filePath);
+    await fs.promises.access(filePath);
     return true;
   } catch {
     return false;
   }
 };
 
-const tailwindConfigPath = join(process.cwd(), "packages/tailwind/src/web.ts");
+const tailwindConfigPath = path.join(
+  process.cwd(),
+  "packages/tailwind/src/web.ts",
+);
 const tailwindConfigExists = await fileExists(tailwindConfigPath);
 
 /** @typedef {import("prettier").Config} PrettierConfig */
