@@ -2,17 +2,17 @@
   "name": "config",
   "private": true,
   "engines": {
-    "node": ">=20.15.0"
+    "node": ">=20.16.0"
   },
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.7.0",
   "scripts": {
     "build": "turbo build",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
-    "format": "turbo format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
-    "format:fix": "turbo format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
-    "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
-    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "format": "turbo format --continue -- --cache --cache-location .cache/.prettiercache",
+    "format:fix": "turbo format --continue -- --write --cache --cache-location .cache/.prettiercache",
+    "lint": "turbo lint --continue -- --cache --cache-location .cache/.eslintcache",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location .cache/.eslintcache",
     "lint:ws": "pnpm dlx sherif@latest",
     "changeset": "changeset",
     "publish-packages": "changeset version && changeset publish",
@@ -23,7 +23,7 @@
     "@changesets/cli": "^2.27.7",
     "@kyh/prettier-config": "workspace:*",
     "prettier": "catalog:",
-    "turbo": "^2.0.9",
+    "turbo": "^2.0.12",
     "typescript": "catalog:"
   },
   "prettier": "@kyh/prettier-config"
