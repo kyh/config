@@ -1,5 +1,7 @@
 export const runtime = "edge";
 
-export default function HomePage() {
+const HomePage = () => {
   return <div>Hello World</div>;
-}
+};
+
+export default HomePage;
