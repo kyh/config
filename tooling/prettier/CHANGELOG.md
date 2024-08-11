@@ -1,5 +1,11 @@
 # @kyh/prettier-config
 
+## 1.0.1
+
+### Patch Changes
+
+- update gitignore location
+
 ## 1.0.0
 
 ### Major Changes
