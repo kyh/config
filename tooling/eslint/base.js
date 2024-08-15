@@ -2,37 +2,35 @@
 
 import * as fs from "node:fs";
 import * as path from "node:path";
-import * as url from "node:url";
 import { includeIgnoreFile } from "@eslint/compat";
 import eslint from "@eslint/js";
 import importPlugin from "eslint-plugin-import";
 import turboPlugin from "eslint-plugin-turbo";
 import tseslint from "typescript-eslint";
 
-const __filename = url.fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+async function findGitignorePath(startDir) {
+  const gitignorePath = path.join(startDir, ".gitignore");
 
-const fileExists = async (filePath) => {
   try {
-    await fs.promises.access(filePath);
-    return true;
+    await fs.promises.access(gitignorePath, fs.constants.F_OK);
+    return gitignorePath;
   } catch {
-    return false;
-  }
-};
+    // .gitignore not found in current directory
+    const parentDir = path.dirname(startDir);
 
-const gitignorePath = path.join(__dirname, "../../.gitignore");
-const gitignorePath2 = path.join(__dirname, "../../../.gitignore");
+    // Check if we've reached the root directory
+    if (parentDir === startDir) {
+      return null; // .gitignore not found
+    }
+
+    // Recursively search in the parent directory
+    return findGitignorePath(parentDir);
+  }
+}
 
 export default tseslint.config(
   // Ignore files not tracked by VCS and any config files
-  includeIgnoreFile(
-    (await fileExists(gitignorePath))
-      ? gitignorePath
-      : (await fileExists(gitignorePath2))
-        ? gitignorePath2
-        : "",
-  ),
+  includeIgnoreFile(await findGitignorePath(import.meta.dirname)),
   { ignores: ["**/*.config.*"] },
   {
     files: ["**/*.js", "**/*.ts", "**/*.tsx"],
