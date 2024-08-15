@@ -1,5 +1,11 @@
 # @kyh/eslint-config
 
+## 1.0.2
+
+### Patch Changes
+
+- update gitignore search
+
 ## 1.0.1
 
 ### Patch Changes

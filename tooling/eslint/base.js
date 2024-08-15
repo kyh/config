@@ -8,6 +8,11 @@ import importPlugin from "eslint-plugin-import";
 import turboPlugin from "eslint-plugin-turbo";
 import tseslint from "typescript-eslint";
 
+/**
+ * Recursively search for a `.gitignore` file starting from the given directory.
+ * @param {string} startDir The directory to start searching from.
+ * @returns {Promise<string>} The path to the `.gitignore` file or `null` if not found.
+ */
 async function findGitignorePath(startDir) {
   const gitignorePath = path.join(startDir, ".gitignore");
 
@@ -20,7 +25,7 @@ async function findGitignorePath(startDir) {
 
     // Check if we've reached the root directory
     if (parentDir === startDir) {
-      return null; // .gitignore not found
+      return ""; // .gitignore not found
     }
 
     // Recursively search in the parent directory
