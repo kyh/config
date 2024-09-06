@@ -20,10 +20,10 @@
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.7",
+    "@changesets/cli": "^2.27.8",
     "@kyh/prettier-config": "workspace:*",
     "prettier": "catalog:",
-    "turbo": "^2.0.13",
+    "turbo": "^2.1.1",
     "typescript": "catalog:"
   },
   "prettier": "@kyh/prettier-config"
