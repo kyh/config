@@ -1,10 +1,6 @@
 {
   "name": "config",
   "private": true,
-  "engines": {
-    "node": ">=20.16.0"
-  },
-  "packageManager": "pnpm@9.7.1",
   "scripts": {
     "build": "turbo build",
     "clean": "git clean -xdf node_modules",
@@ -23,7 +19,7 @@
     "@changesets/cli": "^2.27.8",
     "@kyh/prettier-config": "workspace:*",
     "prettier": "catalog:",
-    "turbo": "^2.1.1",
+    "turbo": "^2.1.2",
     "typescript": "catalog:"
   },
   "prettier": "@kyh/prettier-config"
