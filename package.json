@@ -12,7 +12,7 @@
     "lint:fix": "turbo lint --continue -- --fix --cache --cache-location .cache/.eslintcache",
     "lint:ws": "pnpm dlx sherif@latest",
     "changeset": "changeset",
-    "publish": "changeset version && changeset publish",
+    "publish-packages": "changeset version && changeset publish",
     "postinstall": "pnpm lint:ws",
     "typecheck": "turbo typecheck"
   },

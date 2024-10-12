@@ -1,5 +1,11 @@
 # @kyh/prettier-config
 
+## 1.0.7
+
+### Patch Changes
+
+- d471e2c: update packages
+
 ## 1.0.6
 
 ### Patch Changes
