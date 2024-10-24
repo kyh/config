@@ -20,7 +20,7 @@
     "@changesets/cli": "^2.27.9",
     "@kyh/prettier-config": "workspace:*",
     "prettier": "catalog:",
-    "turbo": "^2.2.1",
+    "turbo": "^2.2.3",
     "typescript": "catalog:"
   },
   "prettier": "@kyh/prettier-config"
