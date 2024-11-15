@@ -1,5 +1,11 @@
 # @kyh/prettier-config
 
+## 1.0.11
+
+### Patch Changes
+
+- update packages
+
 ## 1.0.10
 
 ### Patch Changes
