@@ -5,8 +5,6 @@
     "access": "public"
   },
   "files": [
-    "./base.json",
-    "./nextjs.json",
-    "./react.json"
+    "*.json"
   ]
 }
