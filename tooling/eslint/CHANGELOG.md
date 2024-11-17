@@ -1,5 +1,11 @@
 # @kyh/eslint-config
 
+## 1.1.0
+
+### Minor Changes
+
+- change tsconfig
+
 ## 1.0.11
 
 ### Patch Changes
