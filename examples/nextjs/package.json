@@ -25,7 +25,7 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
-    "dotenv-cli": "^7.4.2",
+    "dotenv-cli": "^7.4.4",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "tailwindcss": "catalog:",
