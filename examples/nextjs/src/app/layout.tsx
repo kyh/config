@@ -1,4 +1,4 @@
-import "~/app/globals.css";
+import "./globals.css";
 
 const RootLayout = (props: { children: React.ReactNode }) => {
   return (
