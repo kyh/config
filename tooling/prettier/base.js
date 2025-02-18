@@ -1,21 +1,3 @@
-import * as fs from "node:fs";
-import * as path from "node:path";
-
-const fileExists = async (filePath) => {
-  try {
-    await fs.promises.access(filePath);
-    return true;
-  } catch {
-    return false;
-  }
-};
-
-const tailwindConfigPath = path.join(
-  process.cwd(),
-  "packages/tailwind/src/web.ts",
-);
-const tailwindConfigExists = await fileExists(tailwindConfigPath);
-
 /** @typedef {import("prettier").Config} PrettierConfig */
 /** @typedef {import("prettier-plugin-tailwindcss").PluginOptions} TailwindConfig */
 /** @typedef {import("@ianvs/prettier-plugin-sort-imports").PluginConfig} SortImportsConfig */
@@ -42,10 +24,5 @@ const config = {
   importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
   importOrderTypeScriptVersion: "4.4.0",
 };
-
-if (tailwindConfigExists) {
-  console.log("Using Tailwind config from", tailwindConfigPath);
-  config.tailwindConfig = tailwindConfigPath;
-}
 
 export default config;

@@ -1,1 +1,3 @@
-export const unused = () => {};
+export const unused = () => {
+  return null;
+};
