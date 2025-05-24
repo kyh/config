@@ -23,14 +23,14 @@
     "@kyh/eslint-config": "workspace:*",
     "@kyh/prettier-config": "workspace:*",
     "@kyh/tsconfig": "workspace:*",
-    "@tailwindcss/postcss": "^4.1.6",
+    "@tailwindcss/postcss": "^4.1.7",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "eslint": "catalog:",
     "postcss": "^8.5.3",
     "prettier": "catalog:",
-    "tailwindcss": "^4.1.6",
+    "tailwindcss": "^4.1.7",
     "typescript": "catalog:"
   }
 }
