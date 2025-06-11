@@ -15,7 +15,7 @@
   },
   "prettier": "@kyh/prettier-config",
   "dependencies": {
-    "next": "^15.3.2",
+    "next": "^15.3.3",
     "react": "catalog:",
     "react-dom": "catalog:"
   },
@@ -23,14 +23,14 @@
     "@kyh/eslint-config": "workspace:*",
     "@kyh/prettier-config": "workspace:*",
     "@kyh/tsconfig": "workspace:*",
-    "@tailwindcss/postcss": "^4.1.7",
+    "@tailwindcss/postcss": "^4.1.8",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "eslint": "catalog:",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.4",
     "prettier": "catalog:",
-    "tailwindcss": "^4.1.7",
+    "tailwindcss": "^4.1.8",
     "typescript": "catalog:"
   }
 }
