@@ -3,14 +3,14 @@ packages:
   - examples/*
 
 catalog:
-  eslint: ^9.30.1
+  eslint: ^9.31.0
   prettier: ^3.6.2
   typescript: ^5.8.3
   react: ^19.1.0
   react-dom: ^19.1.0
   '@types/react': ^19.1.8
   '@types/react-dom': ^19.1.6
-  '@types/node': ^24.0.12
+  '@types/node': ^24.0.13
 
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
