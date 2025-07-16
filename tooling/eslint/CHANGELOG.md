@@ -1,5 +1,11 @@
 # @kyh/eslint-config
 
+## 1.1.7
+
+### Patch Changes
+
+- update linter version
+
 ## 1.1.6
 
 ### Patch Changes
