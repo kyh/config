@@ -15,7 +15,7 @@
   },
   "prettier": "@kyh/prettier-config",
   "dependencies": {
-    "next": "^15.4.2",
+    "next": "^15.4.3",
     "react": "catalog:",
     "react-dom": "catalog:"
   },
