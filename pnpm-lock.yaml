@@ -42,8 +42,8 @@ importers:
         specifier: workspace:*
         version: link:tooling/prettier
       dotenv-cli:
-        specifier: ^8.0.0
-        version: 8.0.0
+        specifier: ^9.0.0
+        version: 9.0.0
       prettier:
         specifier: 'catalog:'
         version: 3.6.2
@@ -1026,8 +1026,8 @@ packages:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
     engines: {node: '>=0.10.0'}
 
-  dotenv-cli@8.0.0:
-    resolution: {integrity: sha512-aLqYbK7xKOiTMIRf1lDPbI+Y+Ip/wo5k3eyp6ePysVaSqbyxjyK3dK35BTxG+rmd7djf5q2UPs4noPNH+cj0Qw==}
+  dotenv-cli@9.0.0:
+    resolution: {integrity: sha512-NhGrQum/u1VTBxnSnlNwVkTP3gojYO8T6Fntyru93wbR1hPo8aFhDFJiBPmkT0771i7f5Rd7EQDaOreS8jY8gA==}
     hasBin: true
 
   dotenv-expand@10.0.0:
@@ -1038,8 +1038,8 @@ packages:
     resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
     engines: {node: '>=12'}
 
-  dotenv@16.5.0:
-    resolution: {integrity: sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==}
+  dotenv@17.2.0:
+    resolution: {integrity: sha512-Q4sgBT60gzd0BB0lSyYD3xM4YxrXA9y4uBDof1JNYGzOXrQdQ6yX+7XIAqoFOGQFOTK1D3Hts5OllpxMDZFONQ==}
     engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
@@ -3147,10 +3147,10 @@ snapshots:
     dependencies:
       esutils: 2.0.3
 
-  dotenv-cli@8.0.0:
+  dotenv-cli@9.0.0:
     dependencies:
       cross-spawn: 7.0.6
-      dotenv: 16.5.0
+      dotenv: 17.2.0
       dotenv-expand: 10.0.0
       minimist: 1.2.8
 
@@ -3158,7 +3158,7 @@ snapshots:
 
   dotenv@16.0.3: {}
 
-  dotenv@16.5.0: {}
+  dotenv@17.2.0: {}
 
   dunder-proto@1.0.1:
     dependencies:
